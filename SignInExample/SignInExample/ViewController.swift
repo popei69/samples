@@ -20,9 +20,7 @@ class ViewController: UIViewController {
     }
     
     private func setupSignInButton() {
-//        let signInButton = ASAuthorizationAppleIDButton()
-        let signInButton = UIButton()
-        signInButton.setTitle("Sign in", for: .normal)
+        let signInButton = ASAuthorizationAppleIDButton()
         signInButton.addTarget(self, action: #selector(ViewController.signInButtonTapped), for: .touchDown)
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
