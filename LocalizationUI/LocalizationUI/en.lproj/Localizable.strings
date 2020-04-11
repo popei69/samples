@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  LocalizationUI
+
+  Created by Benoit PASQUIER on 19/01/2020.
+  Copyright © 2020 Benoit PASQUIER. All rights reserved.
+*/
+
+"Welcome into my app" = "Welcome into my app";
+"Start by tapping this button" = "Start by tapping this button";
+"Start browsing" = "Start browsing";

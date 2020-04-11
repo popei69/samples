@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1463FD8E23D4434D00FB6A58 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1463FD8D23D4434D00FB6A58 /* SampleView.swift */; };
 		146E164E23C4B11C009FCB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E164D23C4B11C009FCB34 /* AppDelegate.swift */; };
 		146E165023C4B11C009FCB34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E164F23C4B11C009FCB34 /* SceneDelegate.swift */; };
 		146E165223C4B11C009FCB34 /* CurrenciesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146E165123C4B11C009FCB34 /* CurrenciesListView.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1463FD8D23D4434D00FB6A58 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		146E164A23C4B11C009FCB34 /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		146E164D23C4B11C009FCB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		146E164F23C4B11C009FCB34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				14EB218923C9EF45007E550D /* CurrenciesListViewModel.swift */,
 				14D82DD123CB0DDE0051B9CB /* CurrencyItemView.swift */,
 				14D82DD323CB0E480051B9CB /* CurrencyItemViewModel.swift */,
+				1463FD8D23D4434D00FB6A58 /* SampleView.swift */,
 			);
 			path = ListView;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 146E164523C4B11C009FCB34 /* Build configuration list for PBXProject "TemplateProjectUI" */;
+			buildConfigurationList = 146E164523C4B11C009FCB34 /* Build configuration list for PBXProject "SwiftUI-MVVM" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,6 +226,7 @@
 				14EB218F23C9F028007E550D /* FileManager+Json.swift in Sources */,
 				14EB218C23C9EFD0007E550D /* ConverterServiceProtocol.swift in Sources */,
 				146E165023C4B11C009FCB34 /* SceneDelegate.swift in Sources */,
+				1463FD8E23D4434D00FB6A58 /* SampleView.swift in Sources */,
 				14D82DD223CB0DDE0051B9CB /* CurrencyItemView.swift in Sources */,
 				146E166323C4B288009FCB34 /* Currency.swift in Sources */,
 				14D82DD423CB0E480051B9CB /* CurrencyItemViewModel.swift in Sources */,
@@ -403,7 +407,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		146E164523C4B11C009FCB34 /* Build configuration list for PBXProject "TemplateProjectUI" */ = {
+		146E164523C4B11C009FCB34 /* Build configuration list for PBXProject "SwiftUI-MVVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				146E165C23C4B120009FCB34 /* Debug */,
