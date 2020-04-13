@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1478C93B24444D600081645A /* SleepService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1478C93A24444D600081645A /* SleepService.swift */; };
 		147F2D12244196CC00048901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F2D11244196CC00048901 /* AppDelegate.swift */; };
 		147F2D14244196CC00048901 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F2D13244196CC00048901 /* SceneDelegate.swift */; };
 		147F2D16244196CC00048901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F2D15244196CC00048901 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1478C93A24444D600081645A /* SleepService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepService.swift; sourceTree = "<group>"; };
 		147F2D0E244196CC00048901 /* HealthSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147F2D11244196CC00048901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		147F2D13244196CC00048901 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				147F2D11244196CC00048901 /* AppDelegate.swift */,
 				147F2D13244196CC00048901 /* SceneDelegate.swift */,
 				147F2D15244196CC00048901 /* ViewController.swift */,
+				1478C93A24444D600081645A /* SleepService.swift */,
 				147F2D17244196CC00048901 /* Main.storyboard */,
 				147F2D1A244196CF00048901 /* Assets.xcassets */,
 				147F2D1C244196CF00048901 /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 				147F2D16244196CC00048901 /* ViewController.swift in Sources */,
 				147F2D12244196CC00048901 /* AppDelegate.swift in Sources */,
 				147F2D14244196CC00048901 /* SceneDelegate.swift in Sources */,
+				1478C93B24444D600081645A /* SleepService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
