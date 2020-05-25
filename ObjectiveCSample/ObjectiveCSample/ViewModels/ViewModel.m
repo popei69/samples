@@ -15,7 +15,7 @@
 @interface ViewModel()
 
 @property (nonatomic, strong) id<SongFetcherProtocol> fetcher;
-@property (nonatomic, strong) NSArray<Song *> *songs;
+@property (nonatomic, strong) NSArray<SongDisplay *> *items;
 
 @end
 
@@ -32,27 +32,32 @@
     return self;
 }
 
-- (void)getSongsWithSuccess:(void (^)(NSArray<Song *> * _Nonnull))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
+- (void)getSongsWithSuccess:(void (^)(NSArray<SongDisplay *> * _Nonnull))successCompletion error:(void (^)(NSError * _Nonnull))errorCompletion {
     
     __weak ViewModel *weakSelf = self;
     [self.fetcher fetchSongsWithSuccess:^(NSArray<Song *> *songs) {
-        [weakSelf setSongs:songs];
-        successCompletion(songs);
+        
+        NSMutableArray * items = [[NSMutableArray alloc] init];
+        for (Song *song in songs) {
+            [items addObject:[[SongDisplay alloc] initWithSong:song]]; 
+        }
+        [weakSelf setItems:items];
+        successCompletion(items);
     } error:errorCompletion];
 }
 
 - (NSUInteger)numberOfItems {
-    return self.songs.count;
+    return self.items.count;
 }
 
 - (NSUInteger)numberOfSections {
     return 1;
 }
 
-- (nullable Song *)itemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row >= self.songs.count) {
+- (SongDisplay *)itemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= self.items.count) {
         return nil;
     }
-    return self.songs[indexPath.row];
+    return self.items[indexPath.row];
 }
 @end

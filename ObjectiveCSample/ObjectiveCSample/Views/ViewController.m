@@ -48,7 +48,7 @@
         assert(false);
     }
     
-    [cell setDisplay:[self.viewModel itemAtIndexPath:indexPath]]
+    [cell setDisplay:[self.viewModel itemAtIndexPath:indexPath]];
     return cell;
 }
 

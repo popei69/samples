@@ -10,14 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class Song;
+@class SongDisplay;
 @interface SongTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel * titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel * artistLabel;
 @property (nonatomic, strong) IBOutlet UIImageView * coverImageView;
 
-- (void)setDisplay:(nullable Song*)song;
+- (void)setDisplay:(nullable SongDisplay*)display;
 
 @end
 

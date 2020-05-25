@@ -7,7 +7,7 @@
 //
 
 #import "SongTableViewCell.h"
-#import "Song.h"
+#import "SongDisplay.h"
 
 @implementation SongTableViewCell
 
@@ -22,10 +22,10 @@
     // Configure the view for the selected state
 }
 
-- (void)setDisplay:(nullable Song *)song {
+- (void)setDisplay:(nullable SongDisplay *)display {
 
-    [self.titleLabel setText:(!song) ? song.title : nil];
-    [self.artistLabel setText:(!song) ? song.artistName : nil];
+    [self.titleLabel setText:display.title];
+    [self.artistLabel setText:display.subtitle];
     
     // TODO load image
     [self.coverImageView setImage:nil];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14856452247B817900E07E99 /* SongDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 14856451247B817900E07E99 /* SongDisplay.m */; };
 		14C67D142478C5F300217362 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67D132478C5F300217362 /* AppDelegate.m */; };
 		14C67D172478C5F300217362 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67D162478C5F300217362 /* SceneDelegate.m */; };
 		14C67D1A2478C5F300217362 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67D192478C5F300217362 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14856450247B817900E07E99 /* SongDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongDisplay.h; sourceTree = "<group>"; };
+		14856451247B817900E07E99 /* SongDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongDisplay.m; sourceTree = "<group>"; };
 		14C67D0F2478C5F300217362 /* ObjectiveCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C67D122478C5F300217362 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14C67D132478C5F300217362 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			children = (
 				14C67D3C2478C67F00217362 /* Song.h */,
 				14C67D3D2478C67F00217362 /* Song.m */,
+				14856450247B817900E07E99 /* SongDisplay.h */,
+				14856451247B817900E07E99 /* SongDisplay.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				14C67D142478C5F300217362 /* AppDelegate.m in Sources */,
 				14C67D4E2478D0E800217362 /* SongParser.m in Sources */,
 				14C67D252478C5F500217362 /* main.m in Sources */,
+				14856452247B817900E07E99 /* SongDisplay.m in Sources */,
 				14C67D422478C75600217362 /* NetworkService.m in Sources */,
 				14C67D512478D3D200217362 /* SongTableViewCell.m in Sources */,
 				14C67D172478C5F300217362 /* SceneDelegate.m in Sources */,

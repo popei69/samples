@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Song.h"
+#import "SongDisplay.h"
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -15,11 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ViewModel : NSObject
 
 
-- (void)getSongsWithSuccess:(void (^)(NSArray<Song*> *songs))successCompletion error:(void (^)(NSError *error))errorCompletion;
+- (void)getSongsWithSuccess:(void (^)(NSArray<SongDisplay*> *songs))successCompletion error:(void (^)(NSError *error))errorCompletion;
 
 - (NSUInteger)numberOfItems;
 - (NSUInteger)numberOfSections;
-- (nullable Song *)itemAtIndexPath:(NSIndexPath *)indexPath;
+- (nullable SongDisplay *)itemAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
