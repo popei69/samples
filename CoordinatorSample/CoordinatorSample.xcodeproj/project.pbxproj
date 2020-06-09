@@ -15,6 +15,8 @@
 		F1E5D37C248F0EE2007AB96C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E5D37B248F0EE2007AB96C /* BaseCoordinator.swift */; };
 		F1E5D37F248F0F20007AB96C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E5D37E248F0F20007AB96C /* AppCoordinator.swift */; };
 		F1E5D382248F1507007AB96C /* FirstCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E5D381248F1507007AB96C /* FirstCoordinator.swift */; };
+		F1E5D384248F1585007AB96C /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E5D383248F1585007AB96C /* Drawable.swift */; };
+		F1E5D386248F15A2007AB96C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E5D385248F15A2007AB96C /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		F1E5D37B248F0EE2007AB96C /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		F1E5D37E248F0F20007AB96C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F1E5D381248F1507007AB96C /* FirstCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCoordinator.swift; sourceTree = "<group>"; };
+		F1E5D383248F1585007AB96C /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		F1E5D385248F15A2007AB96C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 			children = (
 				F1E5D379248F0EBA007AB96C /* Coordinator.swift */,
 				F1E5D37B248F0EE2007AB96C /* BaseCoordinator.swift */,
+				F1E5D383248F1585007AB96C /* Drawable.swift */,
+				F1E5D385248F15A2007AB96C /* Router.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -167,9 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E5D386248F15A2007AB96C /* Router.swift in Sources */,
 				F1E5D37F248F0F20007AB96C /* AppCoordinator.swift in Sources */,
 				F1E5D382248F1507007AB96C /* FirstCoordinator.swift in Sources */,
 				F1E5D37C248F0EE2007AB96C /* BaseCoordinator.swift in Sources */,
+				F1E5D384248F1585007AB96C /* Drawable.swift in Sources */,
 				F1E5D37A248F0EBA007AB96C /* Coordinator.swift in Sources */,
 				F1E5D369248F0E97007AB96C /* FirstViewController.swift in Sources */,
 				F1E5D365248F0E97007AB96C /* AppDelegate.swift in Sources */,
