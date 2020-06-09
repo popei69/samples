@@ -19,7 +19,10 @@ extension Coordinator {
         childCoordinators.append(coordinator)
     }
 
-    func free(coordinator: Coordinator) {
+    func free(coordinator: Coordinator?) {
+        guard let coordinator = coordinator else {
+            return
+        }
         childCoordinators = childCoordinators.filter { $0 !== coordinator }
     }
 }

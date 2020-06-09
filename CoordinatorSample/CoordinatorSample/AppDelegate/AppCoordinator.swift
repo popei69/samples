@@ -20,19 +20,13 @@ class AppCoordinator : BaseCoordinator {
 
     override func start() {
         // preparing root view
-        let navigationController = UINavigationController()
-        let myCoordinator = FirstCoordinator(navigationController: navigationController)
+        let router = Router(navigationController: UINavigationController())
+        let myCoordinator = FirstCoordinator(router: router)
 
         // store child coordinator
-        self.store(coordinator: myCoordinator)
-        myCoordinator.start()
+        self.start(coordinator: myCoordinator)
 
-        window.rootViewController = navigationController
+        window.rootViewController = router.navigationController
         window.makeKeyAndVisible()
-
-        // detect when free it
-        myCoordinator.isCompleted = { [weak self] in
-            self?.free(coordinator: myCoordinator)
-        }
     }
 }

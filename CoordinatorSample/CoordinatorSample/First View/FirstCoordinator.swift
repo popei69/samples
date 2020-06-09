@@ -10,10 +10,10 @@ import UIKit
 
 class FirstCoordinator : BaseCoordinator {
 
-    var navigationController: UINavigationController?
+    let router: RouterProtocol
 
-    init(navigationController :UINavigationController?) {
-        self.navigationController = navigationController
+    init(router: RouterProtocol) {
+        self.router = router
     }
 
     override func start() {
@@ -25,20 +25,15 @@ class FirstCoordinator : BaseCoordinator {
         // for specific events from viewModel, define next navigation
         viewModel.didSelect = { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.showNextScreen(in: strongSelf.navigationController)
+            strongSelf.showNextScreen(in: strongSelf.router)
         }
 
-        // if user navigates back, view should be released, so does the coordinator, flow is completed
-        viewModel.didTapBack = { [weak self] in
-            self?.isCompleted?()
-        }
-
-        navigationController?.pushViewController(viewController, animated: true)
+        router.push(viewController, isAnimated: true, onNavigateBack: self.isCompleted)
     }
 
     // we can go further in our flow if we need to
-    func showNextScreen(in navigationController: UINavigationController?) {
-//        let newCoordinator = NewCoordinator(product: product, navigationController: navigationController)
-//        self.store(coordinator: newCoordinator)
+    func showNextScreen(in router: RouterProtocol) {
+        let newCoordinator = FirstCoordinator(router: router)
+        self.start(coordinator: newCoordinator)
     }
 }
