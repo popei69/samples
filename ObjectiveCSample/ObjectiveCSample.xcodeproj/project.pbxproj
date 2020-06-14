@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146FEB922495D6CF00DE7133 /* songs.json in Resources */ = {isa = PBXBuildFile; fileRef = 146FEB912495D6CF00DE7133 /* songs.json */; };
+		146FEB972495D85400DE7133 /* FileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 146FEB962495D85400DE7133 /* FileReader.m */; };
 		14856452247B817900E07E99 /* SongDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 14856451247B817900E07E99 /* SongDisplay.m */; };
 		14C67D142478C5F300217362 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67D132478C5F300217362 /* AppDelegate.m */; };
 		14C67D172478C5F300217362 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C67D162478C5F300217362 /* SceneDelegate.m */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		146FEB912495D6CF00DE7133 /* songs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = songs.json; sourceTree = "<group>"; };
+		146FEB952495D85400DE7133 /* FileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileReader.h; sourceTree = "<group>"; };
+		146FEB962495D85400DE7133 /* FileReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileReader.m; sourceTree = "<group>"; };
 		14856450247B817900E07E99 /* SongDisplay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SongDisplay.h; sourceTree = "<group>"; };
 		14856451247B817900E07E99 /* SongDisplay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SongDisplay.m; sourceTree = "<group>"; };
 		14C67D0F2478C5F300217362 /* ObjectiveCSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +91,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146FEB902495D68200DE7133 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				146FEB912495D6CF00DE7133 /* songs.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		146FEB932495D7FE00DE7133 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				14C67D402478C75600217362 /* NetworkService.h */,
+				14C67D412478C75600217362 /* NetworkService.m */,
+				14C67D432478C76500217362 /* NetworkServiceProtocol.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		146FEB942495D80900DE7133 /* File Manager */ = {
+			isa = PBXGroup;
+			children = (
+				146FEB952495D85400DE7133 /* FileReader.h */,
+				146FEB962495D85400DE7133 /* FileReader.m */,
+			);
+			path = "File Manager";
+			sourceTree = "<group>";
+		};
 		14C67D062478C5F300217362 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +139,7 @@
 		14C67D112478C5F300217362 /* ObjectiveCSample */ = {
 			isa = PBXGroup;
 			children = (
+				146FEB902495D68200DE7133 /* Mock */,
 				14C67D3F2478C73E00217362 /* Services */,
 				14C67D3B2478C63000217362 /* Models */,
 				14C67D3A2478C60800217362 /* AppDelegate */,
@@ -166,9 +199,8 @@
 		14C67D3F2478C73E00217362 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				14C67D402478C75600217362 /* NetworkService.h */,
-				14C67D412478C75600217362 /* NetworkService.m */,
-				14C67D432478C76500217362 /* NetworkServiceProtocol.h */,
+				146FEB942495D80900DE7133 /* File Manager */,
+				146FEB932495D7FE00DE7133 /* Network */,
 				14C67D442478CA3500217362 /* SongFetcher.h */,
 				14C67D452478CA3500217362 /* SongFetcher.m */,
 				14C67D4C2478D0E800217362 /* SongParser.h */,
@@ -267,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146FEB922495D6CF00DE7133 /* songs.json in Resources */,
 				14C67D222478C5F500217362 /* LaunchScreen.storyboard in Resources */,
 				14C67D1F2478C5F500217362 /* Assets.xcassets in Resources */,
 				14C67D1D2478C5F300217362 /* Main.storyboard in Resources */,
@@ -289,6 +322,7 @@
 			files = (
 				14C67D462478CA3500217362 /* SongFetcher.m in Sources */,
 				14C67D3E2478C67F00217362 /* Song.m in Sources */,
+				146FEB972495D85400DE7133 /* FileReader.m in Sources */,
 				14C67D4B2478CFE200217362 /* ViewModel.m in Sources */,
 				14C67D1A2478C5F300217362 /* ViewController.m in Sources */,
 				14C67D142478C5F300217362 /* AppDelegate.m in Sources */,

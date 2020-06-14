@@ -1,0 +1,39 @@
+{
+    "result": [
+        {
+            "title": "Song 1",
+            "artist_name": "Artiste 1",
+            "cover": "cover.png"
+        },
+        {
+            "title": "Song 2",
+            "artist_name": "Artiste 1",
+            "cover": "cover.png"
+        },
+        {
+            "title": "Song 3",
+            "artist_name": "Artiste 1",
+            "cover": "cover.png"
+        },
+        {
+            "title": "Song 4",
+            "artist_name": "Artiste 2",
+            "cover": "cover.png"
+        },
+        {
+            "title": "Song 5",
+            "artist_name": "Artiste 2",
+            "cover": "cover.png"
+        },
+        {
+            "title": "Song 6",
+            "artist_name": "Artiste 3",
+            "cover": "cover.png"
+        },
+        {
+            "title": "Song 7",
+            "artist_name": "Artiste 3",
+            "cover": "cover.png"
+        }
+    ]
+}

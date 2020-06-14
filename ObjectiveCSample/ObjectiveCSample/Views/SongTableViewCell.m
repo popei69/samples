@@ -28,7 +28,8 @@
     [self.artistLabel setText:display.subtitle];
     
     // TODO load image
-    [self.coverImageView setImage:nil];
+//    [self.coverImageView setImage:nil];
+    [self.coverImageView setBackgroundColor:UIColor.darkGrayColor];
 }
 
 @end

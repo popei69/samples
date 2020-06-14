@@ -18,6 +18,15 @@
 
 @implementation ViewController
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        self.viewModel = [[ViewModel alloc] init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView setDataSource:self];
@@ -27,12 +36,15 @@
 - (void)getData {
     __weak ViewController *weakSelf = self;
     [self.viewModel getSongsWithSuccess:^(NSArray<Song *> * _Nonnull songs) {
-        [weakSelf.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.tableView reloadData];
+        });
     } error:^(NSError * _Nonnull error) {
         // TODO display error
     }];
 }
 
+//MARK: - UITableViewDataSource 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.viewModel.numberOfSections;
 }

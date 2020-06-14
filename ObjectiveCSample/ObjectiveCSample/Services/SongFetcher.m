@@ -7,6 +7,7 @@
 //
 
 #import "SongFetcher.h"
+#import "FileReader.h"
 
 
 @interface SongFetcher()
@@ -28,9 +29,23 @@
     return self;
 }
 
+/// Mocked data based on JSON file
+- (void)fetchSongsWithSuccess:(void (^)(NSArray<Song *> *))successCompletion error:(void (^)(NSError *))errorCompletion {
+    
+    __weak SongFetcher * weakSelf = self;
+    void (^dataResponse)(NSData *) = ^(NSData *data){ 
+        [weakSelf.parser parseSongs:data withSuccess:successCompletion error:errorCompletion];
+    };
+    
+    // TODO: improve error handling at each steps
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        FileReader * reader = [[FileReader alloc] init];
+        [reader readJson:@"songs" withSuccess:dataResponse error:errorCompletion];
+    });
+}
 
-
-- (void)fetchSongsWithSuccess:(void (^)(NSArray<Song *> *))successCompletion error:(void (^)(NSError *))errorCompletion { 
+/// Base on remote URL
+- (void)fetchRemoteSongsWithSuccess:(void (^)(NSArray<Song *> *))successCompletion error:(void (^)(NSError *))errorCompletion {
     
     NSURL * url = [NSURL URLWithString:@"https://mysongs..."];
     

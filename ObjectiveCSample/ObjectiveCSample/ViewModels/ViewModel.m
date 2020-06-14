@@ -25,8 +25,7 @@
 {
     self = [super init];
     if (self) {
-        ;
-        ;
+        self.items = @[];
         self.fetcher = [[SongFetcher alloc] initWithClient:[[NetworkService alloc] init] parser:[[SongParser alloc] init]];
     }
     return self;

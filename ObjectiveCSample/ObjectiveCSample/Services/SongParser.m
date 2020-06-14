@@ -13,10 +13,18 @@
 - (void)parseSongs:(NSData *)data withSuccess:(void (^)(NSArray<Song *> *))successCompletion error:(void (^)(NSError *))errorCompletion {
     
     NSError *error;
-    NSArray * jsonArray = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    NSDictionary * jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     
-    if (!jsonArray || error) {
+    if (!jsonDictionary || error) {
         // TODO: handle error better way
+        errorCompletion(error);
+        return;
+    }
+    
+    NSArray *jsonArray = [jsonDictionary objectForKey:@"result"];
+    if (!jsonArray) {
+        // TODO: handle error
+        NSError * error = [NSError errorWithDomain:NSCocoaErrorDomain code:999 userInfo:nil];
         errorCompletion(error);
         return;
     }
@@ -26,8 +34,8 @@
         
         // TODO: test fields
         NSString *title = [item objectForKey:@"title"];
-        NSString *artistName = [item objectForKey:@"artistName"];
-        NSString *albumCover = [item objectForKey:@"albumCover"];
+        NSString *artistName = [item objectForKey:@"artist_name"];
+        NSString *albumCover = [item objectForKey:@"cover"];
         
         Song * song = [[Song alloc] initWithTitle:title artistName:artistName albumCover:albumCover];
         [result addObject:song];
