@@ -35,7 +35,7 @@
 
 - (void)getData {
     __weak ViewController *weakSelf = self;
-    [self.viewModel getSongsWithSuccess:^(NSArray<Song *> * _Nonnull songs) {
+    [self.viewModel getSongsWithSuccess:^(NSArray<SongDisplay *> * _Nonnull displays) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.tableView reloadData];
         });

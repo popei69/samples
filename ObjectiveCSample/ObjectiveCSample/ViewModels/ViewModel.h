@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ViewModel : NSObject
 
 
-- (void)getSongsWithSuccess:(void (^)(NSArray<SongDisplay*> *songs))successCompletion error:(void (^)(NSError *error))errorCompletion;
+- (void)getSongsWithSuccess:(void (^)(NSArray<SongDisplay*> *displays))successCompletion error:(void (^)(NSError *error))errorCompletion;
 
 - (NSUInteger)numberOfItems;
 - (NSUInteger)numberOfSections;
