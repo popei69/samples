@@ -24,8 +24,8 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 * VisionSample - [Face detection in iOS with Core ML and Vision in Swift](https://benoitpasquier.com/face-detection-core-ml-vision-ios/)
 
 
-_Wanted to share an improvements? Noticing a typo? I'm open to external contributions :)_
+Wanted to share an improvements? Noticing a typo? I'm open to external contributions :)
 
-Thanks!
+_Feel free to follow me on [Twitter](https://twitter.com/benoitpasquier_) to get latest update posts and projects._
 
 Ben
