@@ -10,7 +10,6 @@ import Combine
 
 enum PlayerGravity {
     case aspectFill
-    case center
     case resize
 }
 
@@ -37,10 +36,7 @@ class PlayerView: UIView {
     
     func setupLayer() {
         switch gravity {
-        case .center:
-            playerLayer.contentsGravity = .center
-            playerLayer.videoGravity = .resize
-            
+        
         case .aspectFill:
             playerLayer.contentsGravity = .resizeAspectFill
             playerLayer.videoGravity = .resizeAspectFill
@@ -132,7 +128,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack {
-                PlayerContainerView(player: model.player, gravity: .center)
+                PlayerContainerView(player: model.player, gravity: .resize)
                     .frame(width: 300, height: 300)
                     .blur(radius: 3.0)
                     .clipShape(Circle())
