@@ -23,6 +23,7 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 * WebKitSample - [How to use Javascript with WKWebView in Swift](https://benoitpasquier.com/ios-webkit-swift-and-javascript/)
 * VisionSample - [Face detection in iOS with Core ML and Vision in Swift](https://benoitpasquier.com/face-detection-core-ml-vision-ios/)
 * videoSample - [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
+* OverlaySample - [Create a dynamic onboarding UI in Swift](https://benoitpasquier.com/dynamic-onboarding-ios-swift/)
 
 Wanted to share an improvements? Noticing a typo? I'm open to external contributions :)
 
