@@ -9,3 +9,5 @@
 "Welcome into my app" = "Welcome into my app";
 "Start by tapping this button" = "Start by tapping this button";
 "Start browsing" = "Start browsing";
+"HELLO_WORLD_%@" = "Hello, %@!";
+"HELLO_WORLD_CROSSPLATFORM" = "Hello, %@!"; 

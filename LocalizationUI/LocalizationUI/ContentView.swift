@@ -21,9 +21,19 @@ enum Translation {
     static var startBrowsing: LocalizedStringKey {
         return "Start browsing"
     }
+    
+    static func hello(_ name: String) -> LocalizedStringKey {
+        return LocalizedStringKey("HELLO_WORLD_\(name)")
+    }
+    
+    static func hello__asString(_ name: String) -> String {
+                return String.localizedStringWithFormat(NSLocalizedString("HELLO_WORLD_CROSSPLATFORM", comment: ""), name)
+            }
 }
 
 struct ContentView: View {
+    
+    let name = "Ben"
     
     var body: some View {
         
@@ -35,6 +45,9 @@ struct ContentView: View {
                     .font(.title)
                 
                 Text("Start by tapping this button")
+                    .font(.body)
+                
+                Text(Translation.hello__asString("Ben"))
                     .font(.body)
             }
             
@@ -56,6 +69,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        .environment(\.locale, .init(identifier: "en"))
+        .environment(\.locale, .init(identifier: "fr"))
     }
 }

@@ -13,7 +13,7 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 
 ### Testing 🛠
 
-* TestingSample - [Advanced testing tips in Xcode](https://benoitpasquier.com//advanced-testing-tips-xcode/)
+* TestingSample - [Advanced testing tips in Xcode](https://benoitpasquier.com/advanced-testing-tips-xcode/)
 * CoverageApp - [Code Coverage in Xcode - How to avoid a vanity metric for your iOS app](https://benoitpasquier.com/code-coverage-xcode-avoid-vanity-metric-ios/) 
 
 ### iOS Feature 📱
