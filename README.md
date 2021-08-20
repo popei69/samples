@@ -13,8 +13,9 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 
 ### Testing 🛠
 
-* TestingSample - [Advanced testing tips in Xcode](https://benoitpasquier.com//advanced-testing-tips-xcode/)
+* TestingSample - [Advanced testing tips in Xcode](https://benoitpasquier.com/advanced-testing-tips-xcode/)
 * CoverageApp - [Code Coverage in Xcode - How to avoid a vanity metric for your iOS app](https://benoitpasquier.com/code-coverage-xcode-avoid-vanity-metric-ios/) 
+* ViewSample - [Unit testing UIView action and gesture in Swift](https://benoitpasquier.com/unit-testing-uiview-action-gesture-swift/)
 
 ### iOS Feature 📱
 
@@ -25,7 +26,6 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 * videoSample - [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
 * OverlaySample - [Create a dynamic onboarding UI in Swift](https://benoitpasquier.com/dynamic-onboarding-ios-swift/)
 * PrivateWeb - [Create a web browser with WebKit and SwiftUI](https://benoitpasquier.com/create-webview-in-swiftui/)
-* ViewSample - [Unit testing UIView action and gesture in Swift](https://benoitpasquier.com/unit-testing-uiview-action-gesture-swift/)
 
 Wanted to share an improvements? Noticing a typo? I'm open to external contributions :)
 
