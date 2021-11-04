@@ -26,6 +26,7 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 * videoSample - [Playing Video with AVPlayer in SwiftUI](https://benoitpasquier.com/playing-video-avplayer-swiftui/)
 * OverlaySample - [Create a dynamic onboarding UI in Swift](https://benoitpasquier.com/dynamic-onboarding-ios-swift/)
 * PrivateWeb - [Create a web browser with WebKit and SwiftUI](https://benoitpasquier.com/create-webview-in-swiftui/)
+* NumberSample - [Currency TextField in SwiftUI](https://benoitpasquier.com/currency-textfield-in-swiftui/)
 
 Wanted to share an improvements? Noticing a typo? I'm open to external contributions :)
 
