@@ -27,6 +27,10 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 * OverlaySample - [Create a dynamic onboarding UI in Swift](https://benoitpasquier.com/dynamic-onboarding-ios-swift/)
 * PrivateWeb - [Create a web browser with WebKit and SwiftUI](https://benoitpasquier.com/create-webview-in-swiftui/)
 
+### macOS Feature 💻
+
+* CameraSample - [Creating a webcam utility app for macOS in SwiftUI](https://benoitpasquier.com/webcam-utility-app-macos-swiftui/)
+
 Wanted to share an improvements? Noticing a typo? I'm open to external contributions :)
 
 _Feel free to follow me on [Twitter](https://twitter.com/benoitpasquier_) to get latest update posts and projects._
