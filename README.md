@@ -28,6 +28,10 @@ _Swift MVVM Template project has been moved here 👉 [Template Project](https:/
 * PrivateWeb - [Create a web browser with WebKit and SwiftUI](https://benoitpasquier.com/create-webview-in-swiftui/)
 * NumberSample - [Currency TextField in SwiftUI](https://benoitpasquier.com/currency-textfield-in-swiftui/)
 
+### macOS Feature 💻
+
+* CameraSample - [Creating a webcam utility app for macOS in SwiftUI](https://benoitpasquier.com/webcam-utility-app-macos-swiftui/)
+
 Wanted to share an improvements? Noticing a typo? I'm open to external contributions :)
 
 _Feel free to follow me on [Twitter](https://twitter.com/benoitpasquier_) to get latest update posts and projects._
