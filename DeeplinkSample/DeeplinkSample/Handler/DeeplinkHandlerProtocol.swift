@@ -9,5 +9,5 @@ import Foundation
 
 protocol DeeplinkHandlerProtocol {
     func canOpenURL(_ url: URL) -> Bool
-    func openUrl(_ url: URL)
+    func openURL(_ url: URL)
 }

@@ -8,9 +8,19 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-    lazy var deeplinkCoordinator = makeDeeplinkCoordinator()
+    
+    lazy var deeplinkCoordinator : DeeplinkCoordinatorProtocol = {
+        return DeeplinkCoordinator(handlers: [
+            AccountDeeplinkHandler(rootViewController: self.rootViewController),
+            VideoDeeplinkHandler(rootViewController: self.rootViewController)
+        ])
+    }()
+    
+    var rootViewController: UIViewController? {
+        return window?.rootViewController
+    }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -48,23 +58,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        let urls = URLContexts.map { $0.url }
-        for url in urls {
-            deeplinkCoordinator.handle(url)
+        guard let firstUrl = URLContexts.first?.url else {
+            return
         }
+        
+        deeplinkCoordinator.handleURL(firstUrl)
     }
 
-}
-
-extension SceneDelegate {
-    
-    private func makeDeeplinkCoordinator() -> DeeplinkCoordinator {
-        var handlers: [DeeplinkHandlerProtocol] = []
-        
-        #if DEBUG
-        handlers.append(DebugDeeplinkHandler(rootViewController: window?.rootViewController))
-        #endif
-        
-        return DeeplinkCoordinator(handlers: handlers)
-    }
 }

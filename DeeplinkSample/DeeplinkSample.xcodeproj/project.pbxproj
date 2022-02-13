@@ -15,7 +15,8 @@
 		1465A59E27AE801A003BF8DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1465A59C27AE801A003BF8DB /* LaunchScreen.storyboard */; };
 		1465A5A727AE843C003BF8DB /* DeeplinkHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465A5A627AE843C003BF8DB /* DeeplinkHandlerProtocol.swift */; };
 		1465A5A927AE846E003BF8DB /* DeeplinkCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465A5A827AE846E003BF8DB /* DeeplinkCoordinator.swift */; };
-		1465A5AB27AE8521003BF8DB /* DebugDeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1465A5AA27AE8521003BF8DB /* DebugDeeplinkHandler.swift */; };
+		14AFFBF727B91C39000F3128 /* AccountDeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFFBF627B91C39000F3128 /* AccountDeeplinkHandler.swift */; };
+		14AFFBF927B91C5D000F3128 /* VideoDeeplinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AFFBF827B91C5C000F3128 /* VideoDeeplinkHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,8 @@
 		1465A59F27AE801A003BF8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1465A5A627AE843C003BF8DB /* DeeplinkHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkHandlerProtocol.swift; sourceTree = "<group>"; };
 		1465A5A827AE846E003BF8DB /* DeeplinkCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkCoordinator.swift; sourceTree = "<group>"; };
-		1465A5AA27AE8521003BF8DB /* DebugDeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugDeeplinkHandler.swift; sourceTree = "<group>"; };
+		14AFFBF627B91C39000F3128 /* AccountDeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDeeplinkHandler.swift; sourceTree = "<group>"; };
+		14AFFBF827B91C5C000F3128 /* VideoDeeplinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDeeplinkHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,8 @@
 			children = (
 				1465A5A627AE843C003BF8DB /* DeeplinkHandlerProtocol.swift */,
 				1465A5A827AE846E003BF8DB /* DeeplinkCoordinator.swift */,
-				1465A5AA27AE8521003BF8DB /* DebugDeeplinkHandler.swift */,
+				14AFFBF627B91C39000F3128 /* AccountDeeplinkHandler.swift */,
+				14AFFBF827B91C5C000F3128 /* VideoDeeplinkHandler.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -155,11 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1465A5AB27AE8521003BF8DB /* DebugDeeplinkHandler.swift in Sources */,
+				14AFFBF727B91C39000F3128 /* AccountDeeplinkHandler.swift in Sources */,
 				1465A5A927AE846E003BF8DB /* DeeplinkCoordinator.swift in Sources */,
 				1465A5A727AE843C003BF8DB /* DeeplinkHandlerProtocol.swift in Sources */,
 				1465A59627AE8018003BF8DB /* ViewController.swift in Sources */,
 				1465A59227AE8018003BF8DB /* AppDelegate.swift in Sources */,
+				14AFFBF927B91C5D000F3128 /* VideoDeeplinkHandler.swift in Sources */,
 				1465A59427AE8018003BF8DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
