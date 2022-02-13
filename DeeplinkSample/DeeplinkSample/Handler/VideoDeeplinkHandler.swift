@@ -25,6 +25,7 @@ final class VideoDeeplinkHandler: DeeplinkHandlerProtocol {
             return
         }
         
+        // mock the navigation
         let viewController = UIViewController()
         switch url.path {
         case "/new":
@@ -35,7 +36,6 @@ final class VideoDeeplinkHandler: DeeplinkHandlerProtocol {
             viewController.view.backgroundColor = .cyan
         }
         
-        // mock the navigation
         rootViewController?.present(viewController, animated: true)
     }
 }
