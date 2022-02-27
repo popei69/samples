@@ -13,6 +13,8 @@
 		14B7754A272AD8DA008083A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B77549272AD8DA008083A8 /* Preview Assets.xcassets */; };
 		14B77555272AD8DA008083A8 /* NumberSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B77554272AD8DA008083A8 /* NumberSampleTests.swift */; };
 		14B77560272AD8DA008083A8 /* NumberSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7755F272AD8DA008083A8 /* NumberSampleUITests.swift */; };
+		6FF1EDD827B5061B009835B0 /* CurrencyUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1EDD727B5061B009835B0 /* CurrencyUITextField.swift */; };
+		6FF1EDDA27B50632009835B0 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF1EDD927B50632009835B0 /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		14B7755B272AD8DA008083A8 /* NumberSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B7755F272AD8DA008083A8 /* NumberSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSampleUITests.swift; sourceTree = "<group>"; };
 		14B77561272AD8DA008083A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FF1EDD727B5061B009835B0 /* CurrencyUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyUITextField.swift; sourceTree = "<group>"; };
+		6FF1EDD927B50632009835B0 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				14B77542272AD8D9008083A8 /* NumberSampleApp.swift */,
 				14B77544272AD8D9008083A8 /* ContentView.swift */,
+				6FF1EDD727B5061B009835B0 /* CurrencyUITextField.swift */,
+				6FF1EDD927B50632009835B0 /* CurrencyTextField.swift */,
 				14B77546272AD8DA008083A8 /* Assets.xcassets */,
 				14B7754B272AD8DA008083A8 /* Info.plist */,
 				14B77548272AD8DA008083A8 /* Preview Content */,
@@ -261,6 +267,8 @@
 			files = (
 				14B77545272AD8D9008083A8 /* ContentView.swift in Sources */,
 				14B77543272AD8D9008083A8 /* NumberSampleApp.swift in Sources */,
+				6FF1EDDA27B50632009835B0 /* CurrencyTextField.swift in Sources */,
+				6FF1EDD827B5061B009835B0 /* CurrencyUITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
