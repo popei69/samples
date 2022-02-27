@@ -45,23 +45,29 @@ class CurrencyUITextField: UITextField {
     @objc private func editingChanged() {
         text = currency(from: decimal)
         resetSelection()
-        value = Int(doubleValue * 100)
+        updateValue()
     }
 
     @objc private func resetSelection() {
         selectedTextRange = textRange(from: endOfDocument, to: endOfDocument)
     }
 
+    private func updateValue() {
+        DispatchQueue.main.async {
+            self.value = self.intValue
+        }
+    }
+
     private var textValue: String {
         return text ?? ""
     }
 
-    private var doubleValue: Double {
-      return (decimal as NSDecimalNumber).doubleValue
-    }
-
     private var decimal: Decimal {
       return textValue.decimal / pow(10, formatter.maximumFractionDigits)
+    }
+
+    private var intValue: Int {
+        return NSDecimalNumber(decimal: decimal * 100).intValue
     }
 
     private func currency(from decimal: Decimal) -> String {
