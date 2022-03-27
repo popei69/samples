@@ -25,11 +25,16 @@ class CurrencyUITextField: UITextField {
     }
 
     override func willMove(toSuperview newSuperview: UIView?) {
+        super.willMove(toSuperview: superview)
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
         addTarget(self, action: #selector(resetSelection), for: .allTouchEvents)
         keyboardType = .numberPad
         textAlignment = .right
         sendActions(for: .editingChanged)
+    }
+
+    override func removeFromSuperview() {
+        print(#function)
     }
 
     override func deleteBackward() {
@@ -53,8 +58,8 @@ class CurrencyUITextField: UITextField {
     }
 
     private func updateValue() {
-        DispatchQueue.main.async {
-            self.value = self.intValue
+        DispatchQueue.main.async { [weak self] in
+            self?.value = self?.intValue ?? 0
         }
     }
 
