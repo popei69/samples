@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow!
     var statusBarItem: NSStatusItem!
     let settings = UserSettings(userDefault: .standard)
+    var defaultCollectionBehavior: NSWindow.CollectionBehavior!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
@@ -33,6 +34,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.backgroundColor = .clear
         window.isMovable = true
         window.isMovableByWindowBackground = true
+        defaultCollectionBehavior = window.collectionBehavior
+        if !settings.isCurrentSpaceOnly {
+            // Show the overlay over all spaces and over full screen apps
+            window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+        }
         
         statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
         statusBarItem.menu = makeMenu()
@@ -58,6 +64,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let mirrorItem = NSMenuItem(title: "Mirror camera", action: #selector(mirrorCamera), keyEquivalent: "")
         mirrorItem.state = settings.isMirroring ? .on : .off
         menu.addItem(mirrorItem)
+
+        let currentSpaceOnlyItem = NSMenuItem(title: "Current space only", action: #selector(currentSpaceOnly), keyEquivalent: "")
+        currentSpaceOnlyItem.state = settings.isCurrentSpaceOnly ? .on : .off
+        menu.addItem(currentSpaceOnlyItem)
+
         menu.addItem(.separator())
         
         menu.addItem(withTitle: "Quit", action: #selector(NSApplication.shared.terminate(_:)), keyEquivalent: "")
@@ -86,6 +97,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusBarItem.menu?.item(withTitle: "Mirror camera")?.state = state
     }
     
+    @objc func currentSpaceOnly() {
+        settings.isCurrentSpaceOnly.toggle()
+        
+        window.collectionBehavior = settings.isCurrentSpaceOnly ? defaultCollectionBehavior : [.canJoinAllSpaces, .fullScreenAuxiliary]
+        let state: NSControl.StateValue = settings.isCurrentSpaceOnly ? .on : .off
+        statusBarItem.menu?.item(withTitle: "Current space only")?.state = state
+    }
+
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
@@ -105,6 +124,12 @@ class UserSettings: ObservableObject {
         }
     }
     
+    @Published var isCurrentSpaceOnly = false {
+        didSet {
+            UserDefaults.standard.setValue(isCurrentSpaceOnly, forKey: "camera.isCurrentSpaceOnly")
+        }
+    }
+
     enum Shape: String {
         case circle
         case rectangle
@@ -113,5 +138,6 @@ class UserSettings: ObservableObject {
     init(userDefault: UserDefaults) {
         self.shape = Shape(rawValue: userDefault.string(forKey: "camera.shape") ?? "") ?? .circle
         self.isMirroring = userDefault.bool(forKey: "camera.isMirroring")
+        self.isCurrentSpaceOnly = userDefault.bool(forKey: "camera.isCurrentSpaceOnly")
     }
 }
