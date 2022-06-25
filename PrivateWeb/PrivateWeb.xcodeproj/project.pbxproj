@@ -101,11 +101,9 @@
 		1401FA7226760BAE00B5A6C1 /* PrivateWeb */ = {
 			isa = PBXGroup;
 			children = (
+				6F5345B92866F02F007E4167 /* WebView */,
 				1401FA7326760BAE00B5A6C1 /* PrivateWebApp.swift */,
 				1401FA7526760BAE00B5A6C1 /* ContentView.swift */,
-				6FFB13D027CB379200D49EA6 /* WebView.swift */,
-				6FFB13D227CB37A800D49EA6 /* WebViewNavigationDelegate.swift */,
-				6FFB13D427CB37C400D49EA6 /* WebViewModel.swift */,
 				1401FA7726760BB000B5A6C1 /* Assets.xcassets */,
 				1401FA7C26760BB000B5A6C1 /* Info.plist */,
 				1401FA7926760BB000B5A6C1 /* Preview Content */,
@@ -137,6 +135,16 @@
 				1401FA9226760BB000B5A6C1 /* Info.plist */,
 			);
 			path = PrivateWebUITests;
+			sourceTree = "<group>";
+		};
+		6F5345B92866F02F007E4167 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				6FFB13D027CB379200D49EA6 /* WebView.swift */,
+				6FFB13D227CB37A800D49EA6 /* WebViewNavigationDelegate.swift */,
+				6FFB13D427CB37C400D49EA6 /* WebViewModel.swift */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

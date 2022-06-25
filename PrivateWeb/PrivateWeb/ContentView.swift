@@ -25,6 +25,7 @@ struct ContentView: View {
                                   text: $model.urlString)
                             .keyboardType(.URL)
                             .autocapitalization(.none)
+                            .disableAutocorrection(true)
                             .padding(10)
                         Spacer()
                     }
