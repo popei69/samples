@@ -62,7 +62,7 @@ class PlayerView: UIView {
     }
 }
 
-final class PlayerContainerView: UIViewRepresentable {
+struct PlayerContainerView: UIViewRepresentable {
     typealias UIViewType = PlayerView
     
     let player: AVPlayer
