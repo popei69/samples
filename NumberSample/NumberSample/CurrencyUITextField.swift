@@ -45,6 +45,15 @@ class CurrencyUITextField: UITextField {
     private func setupViews() {
         tintColor = .clear
         font = .systemFont(ofSize: 40, weight: .regular)
+        setInitialValue()
+    }
+    
+    private func setInitialValue() {
+        if value > 0 {
+            let val = Double(value)
+            let decimalValue = Decimal(val / 100.0)
+            text = currency(from: decimalValue)
+        }
     }
 
     @objc private func editingChanged() {
